@@ -1,3 +1,4 @@
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
@@ -37,6 +38,7 @@ body {
   font-style: italic;
 }
 
+/* Cars Section */
 .cars {
   display: flex;
   flex-wrap: wrap;
@@ -52,6 +54,9 @@ body {
   padding: 1rem;
   border-radius: 10px;
   width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   box-shadow: 0 0 20px rgba(0,255,255,0.2);
   transition: transform 0.3s ease;
 }
@@ -77,23 +82,9 @@ body {
 .price {
   margin-top: 0.5rem;
   font-size: 1.1rem;
-}
-
-footer {
-  background: #111;
   text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-  z-index: 2;
-  position: relative;
 }
 
-footer a {
-  color: #00f7ff;
-  text-decoration: none;
-}
-
-/* Buy Now button */
 .buy-now {
   display: inline-block;
   margin-top: 1rem;
@@ -102,55 +93,43 @@ footer a {
   padding: 0.5rem 1rem;
   border-radius: 5px;
   text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s ease;
+  text-align: center;
 }
 
 .buy-now:hover {
   background: #00c2cc;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  transform: scale(1.05);
 }
 
-body {
-  background-color: #0f0f0f;
-  color: #fff;
-  text-align: center;
-  padding: 2rem;
-}
-
+/* Coming Soon Section */
 .coming-soon {
-  padding: 3rem 1rem;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 12px;
-  max-width: 600px;
-  margin: 4rem auto;
-  box-shadow: 0 0 20px rgba(0, 247, 255, 0.3);
+  padding: 2rem;
+  text-align: center;
 }
 
-.coming-soon h2 {
+.coming-soon-logo img {
+  width: 150px;
+  margin-top: 1rem;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+footer a {
   color: #00f7ff;
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+  text-decoration: none;
 }
 
-.coming-soon-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
-
-.coming-soon-item img {
-  max-width: 200px;
-  border-radius: 10px;
-}
-
-.coming-soon-item p {
-  font-size: 1.2rem;
-  color: #ccc;
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .car-card {
+    width: 90%;
+  }
 }
